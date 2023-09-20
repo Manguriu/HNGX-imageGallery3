@@ -5,28 +5,25 @@ type Props = {};
 
 const Header = (props: Props) => {
   return (
-    <header className="max-container">
+    <header className="max-container mt-5">
       <nav className=" flex justify-between items-center w-full">
         <a href="/">
-          <img
-            src="https://cdn.shopify.com/s/files/1/0034/8759/6579/files/Black_large_logo.png?height=628&pad_color=fff&v=1614328540&width=1200"
-            alt=""
-            width={130}
-            height={10}
-          />
+          <h1 className="text-4xl font-semibold text-cyan-600 max-xl:hidden">
+            |ImageGala|
+          </h1>
         </a>
-        <ul className="flex justify-center items-center gap-16">
-          <li className="font-montserrat leading-normal text-lg text-slate-gray hover:bg-cyan-500 px-6 py-2 rounded-lg">
+        <ul className="flex justify-center items-center lg:gap-5 ">
+          <li className="max-sm:text-[10px] font-montserrat leading-normal text-lg text-slate-gray hover:bg-cyan-500 px-6 py-2 rounded-lg">
             <a href="/"> Home</a>
           </li>
-          <li className="font-montserrat leading-normal text-lg text-slate-gray hover:bg-cyan-500 px-6 py-2 rounded-lg">
+          <li className="max-sm:text-[10px] font-montserrat leading-normal text-lg text-slate-gray hover:bg-cyan-500 px-6 py-2 rounded-lg">
             <a href="/"> Popolar</a>
           </li>
-          <li className="font-montserrat leading-normal text-lg text-slate-gray hover:bg-cyan-500 px-6 py-2 rounded-lg">
-            <a href="/"> Login</a>
+          <li className="max-sm:text-[10px] font-montserrat leading-normal text-lg text-slate-gray hover:bg-cyan-500 px-6 py-2 rounded-lg">
+            <a href="/pages/login"> Login</a>
           </li>
-          <li className="font-montserrat leading-normal text-lg text-slate-gray hover:bg-cyan-500 px-6 py-2 rounded-lg">
-            <a href="/"> Logout</a>
+          <li className="max-sm:text-[10px] font-montserrat leading-normal text-lg text-slate-gray hover:bg-cyan-500 px-6 py-2 rounded-lg">
+            <a href="/pages/logout"> Logout</a>
           </li>
         </ul>
       </nav>

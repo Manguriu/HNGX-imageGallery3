@@ -1,11 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Image from "next/image";
-
 type Props = {};
 
 function Card({
   imgURL,
+  heroImg,
   bigImage,
   changeImage,
 }: {
@@ -19,6 +19,7 @@ function Card({
       changeImage(imgURL.heroImg);
     }
   };
+  // console.log("images1", images);
   return (
     <div
       className={`border-2 rounded-xl ${

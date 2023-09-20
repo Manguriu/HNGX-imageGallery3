@@ -1,32 +1,11 @@
 import React, { useState } from "react";
 import Card from "./Card";
 import Image, { StaticImageData } from "next/image";
-import SearchC from "../search/SearchC";
-const Himages = [
-  {
-    id: 1,
-    heroImg: "/image1.jpeg",
-    imgURL: "/image1.jpeg",
-  },
-  {
-    id: 2,
-    heroImg: "/image2.jpeg",
-    imgURL: "/image3.jpeg",
-  },
-  {
-    id: 3,
-    heroImg: "/image3.jpeg",
-    imgURL: "/image3.jpeg",
-  },
-  {
-    id: 4,
-    heroImg: "/image4.jpeg",
-    imgURL: "/image4.jpeg",
-  },
-];
+import { Himages } from "../data/data";
+
 type Props = {};
 
-function HeroContext({}: Props) {
+function HeroContext() {
   const bigimg1 = "/image5.jpeg";
   const [bigImage, setBigImage] = useState(bigimg1);
   return (
@@ -47,19 +26,18 @@ function HeroContext({}: Props) {
           Discover the world through our lens. Welcome to The Image Gala Where
           Every Image Tells a Story. Explore now!
         </p>
-        <SearchC />
       </div>
 
       <div className="relative flex flex-col lg:mt-[7rem] max-xl:mt-[2rem] items-center flex-1  max-lg:pb-[10rem]">
         <Image
           width={700}
           height={500}
-          className="ml-10 mx-auto object-cover absolute hover:scale-105 transform transition duration-300 ease-in-out"
+          className="ml-11 mx-auto object-cover absolute hover:scale-105 transform transition duration-300 ease-in-out"
           src={`${bigImage}`}
           alt={""}
         />
         <div className="grid grid-cols-4 sm:gap-4 absolute mt-[23rem] sm:left-[10%] max-sm:px-6">
-          {Himages.map((img, index) => (
+          {Himages.map((img: any, index: React.Key | null | undefined) => (
             <div key={index}>
               <Card
                 imgURL={img}
